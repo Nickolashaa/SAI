@@ -1,0 +1,23 @@
+[project]
+name = "lab1"
+version = "0.1.0"
+description = "Поиск лиц и глаз в реальном времени с веб-камеры (OpenCV, каскады Хаара)"
+readme = "README.md"
+authors = [
+    { name = "Nickolashaa", email = "gracevnikolaj220@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "numpy>=2.5.3",
+    "opencv-python>=4.14,<5",
+]
+
+[project.scripts]
+lab1 = "lab1:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+source-include = ["src/lab1/cascades/*.xml"]
